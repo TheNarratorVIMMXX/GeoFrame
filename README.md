@@ -12,6 +12,7 @@
 - [⚡ Features](#-features)
 - [🔧 Technical Implementation](#-technical-implementation)
 - [💾 Installation](#-installation)
+- [🖥️ Display Configuration](#️-display-configuration)
 - [🚀 Usage](#-usage)
 - [📂 Project Structure](#-project-structure)
 - [🎓 Academic Context](#-academic-context)
@@ -247,6 +248,48 @@ pip install -r requirements.txt
 ```bash
 python geoframe.py
 ```
+
+---
+
+## 🖥️ Display Configuration
+
+### 📺 Recommended Settings for Optimal Visualization
+
+For the best visual experience with **GeoFrame**, we recommend the following display settings:
+
+#### **Display Resolution**
+- **Recommended:** 1920 × 1080 (Full HD)
+- This resolution ensures all panels, graphs, and controls are displayed properly without overlapping
+
+#### **Scale and Layout (Windows)**
+The application's interface is optimized for two specific zoom levels:
+
+**Option 1: 150% Scale (Recommended)**
+- Best balance between visibility and screen space
+- Ideal for high-DPI displays
+- All text and controls are comfortably readable
+- Graphs maintain optimal proportions
+
+**Option 2: 100% Scale**
+- Maximum screen real estate
+- All panels visible simultaneously
+- Best for larger monitors (24" or above)
+- Recommended for detailed analysis sessions
+
+#### **How to Adjust Display Settings (Windows 10/11)**
+
+1. Right-click on your desktop and select **Display settings**
+2. Under **Scale and layout**, find the **Display resolution** dropdown
+   - Set to **1920 × 1080 (Recommended)**
+3. In the same section, find the **Scale** dropdown
+   - Choose either **100%** or **150%** based on your preference
+4. Click **Apply** and restart the GeoFrame application
+
+#### ⚠️ Important Notes
+
+- **Other resolutions:** The application will work on other resolutions, but layout may not be optimal
+- **Other scales:** Using scales like 125% or 175% may cause minor alignment issues
+- **Multiple monitors:** If using multiple displays, ensure GeoFrame runs on the monitor with the recommended settings
 
 ---
 
