@@ -2,7 +2,7 @@
 
 **Copyright (c) 2025 Magallanes López Carlos Gabriel**
 
-##Preamble
+## Preamble
 
 This software is shared publicly for educational, academic, and professional portfolio purposes.
 
