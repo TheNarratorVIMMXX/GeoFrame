@@ -1,100 +1,46 @@
-# Educational Visualization Software License (EVSL)
+# PROPRIETARY SOFTWARE LICENSE
 
-**Copyright (c) 2025 Magallanes López Carlos Gabriel**
-
-## Preamble
-
-This software is shared publicly for educational, academic, and professional portfolio purposes.
+**Copyright © 2025 Carlos Gabriel Magallanes López**  
+**All Rights Reserved**
 
 ---
 
-## ✅ PERMISSIONS GRANTED
+## GRANT OF LICENSE
 
-You are permitted to:
+This license permits you to:
 
-1. **View** the complete source code
-2. **Study** how the software works
-3. **Learn** from the implemented programming techniques
-4. **Run** the software on your personal computer
-5. **Cite** the code in academic work with the following attribution:
-```
-Magallanes López, C. G. (2025). GeoFrame - Norman Window Optimizer.
-
-CBTis No. 128. https://github.com/[your-username]/[your-repo]
-```
+✅ Download and use the software for personal and educational purposes  
+✅ Install and run the application on your personal devices
 
 ---
 
-## ❌RESTRICTIONS
+## RESTRICTIONS
 
-**The following are NOT permitted:**
+You may **NOT**:
 
-1. **Redistributing** the source code (in whole or in part) on any medium or platform.
-2. **Copying** code fragments for use in other projects without written authorization.
-3. **Modifying** and sharing altered versions of the software.
-4. **Using** the code for any type of commercial gain.
-5. **Incorporating** this code as a dependency or component in other projects.
-6. **Claiming authorship** or presenting the work as your own.
-7. **Removing or modifying** copyright and authorship notices.
+❌ Modify, reverse engineer, decompile, or disassemble the software  
+❌ Redistribute, share, or make copies available to others  
+❌ Use the software for commercial purposes without written permission  
+❌ Remove or modify copyright notices or proprietary markings  
+❌ Create derivative works based on the software
 
 ---
 
-## 📚 EDUCATIONAL USE
+## DISCLAIMER
 
-For **strictly educational use** in academic institutions:
-- Teachers may show the code in class as a teaching example.
+This software is provided "as is" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
 
-- Students may study the code to learn.
-- **You may NOT** copy the code into your own class projects.
-- **You may NOT** redistribute the code to other students.
+In no event shall the copyright holder be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
 
 ---
 
-## 🤝 REQUEST FOR SPECIAL PERMISSIONS
+## CONTACT
 
-If you wish to:
-- Use parts of the code in your project
-- Redistribute the software
-- Create derivative works
-- Any use not covered in "PERMISSIONS GRANTED"
+For licensing inquiries, commercial use, or permissions:
 
-**You must request explicit written permission from:**
-📧 cgmagallanes23@gmail.com
+**Email:** cgmagallanes23@gmail.com  
+**Developer:** Magallanes López Carlos Gabriel
 
 ---
 
-## ⚖️ LEGAL TERMS
-
-1. **Intellectual Property:** All rights not explicitly granted in this license are reserved by the author.
-
-2. **No Warranties:** This software is provided "AS IS," without warranties of any kind, express or implied.
-
-3. **Limitation of Liability:** The author shall not be liable for damages arising from the use of, or inability to use, the software.
-
-4. **Jurisdiction:** This license is governed by the laws of Mexico.
-
-5. **Termination:** This license terminates automatically if any of its terms are violated.
-
----
-
-## 📌 ACKNOWLEDGMENTS
-
-This project was developed as part of the academic program of:
-- **Institution:** Technological Industrial and Services High School No. 128
-- **Subject:** Mathematics III
-- **Group:** 3rd "J"
-- **Date:** December 2025
-
----
-
-## 📄 NOTE ON CREATIVE COMMONS
-
-This is NOT a Creative Commons license. CC licenses are not designed for software, according to the Creative Commons organization itself.
-
----
-
-**© 2025 Magallanes López Carlos Gabriel. All rights reserved.**
-
----
-
-*For more information about the project, see the README.md file*
+**Last Updated:** December 16, 2025
