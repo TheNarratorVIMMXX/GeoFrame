@@ -14,8 +14,6 @@
 - [💾 Instalación](#-instalación)
 - [🖥️ Configuración de Pantalla](#️-configuración-de-pantalla)
 - [🚀 Uso](#-uso)
-- [📂 Estructura del Proyecto](#-estructura-del-proyecto)
-- [🎓 Contexto Académico](#-contexto-académico)
 - [📜 Licencia](#-licencia)
 - [👤 Autor](#-autor)
 
