@@ -311,7 +311,6 @@ Para consultas de licencia, uso comercial o permisos:
 
 **Carlos Gabriel Magallanes López**
 
-- **Institución:** CBTis No. 128
 - **Correo:** cgmagallanes23@gmail.com
 - **GitHub:** [@TheNarratorVIMXXX](https://github.com/TheNarratorVIMXXX)
 - **Fecha:** Diciembre 2025
