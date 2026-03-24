@@ -1,0 +1,287 @@
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- DOCUMENTACIÓN -->
+<!-- Vista para el Proyecto GeoFrame -->
+<!-- Ultima Modificación: 23/03/2025 -->
+<!-- Autor: Magallanes López Carlos Gabriel -->
+<!-- Correo: cgmagallanes23@gmail.com -->
+<!-- Versión: 1.0 -->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- Vista para el Proyecto GeoFrame -->
+<!DOCTYPE html>                                                                                                             <!-- Declaración de tipo de documento -->
+<html lang="es">                                                                                                            <!-- Especificación del idioma -->
+    <head>                                                                                                                  <!-- Metadatos y recursos -->
+        <meta charset="UTF-8">                                                                                              <!-- Codificación de caracteres -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">                                              <!-- Configuración para dispositivos móviles -->
+        <title>GeoFrame — Optimizador de Ventana Normanda</title>                                                           <!-- Título de la página -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">                                                         <!-- Preconexión para optimizar carga de fuentes -->
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">                                                                       <!-- Hoja de estilos principal -->
+    </head>
+    <body>
+        <div class="cursor" id="cursor"></div>                                                                              <!-- Cursor personalizado -->
+        <div class="cursor-ring" id="cursorRing"></div>                                                                     <!-- Anillo de seguimiento del cursor -->
+        <header>                                                                                                            <!-- Encabezado con navegación -->
+        <div class="logo">                                                                                                  <!-- Logo con SVG -->
+            <div class="logo-glyph">                                                                                        <!-- Icono del logo -->
+            
+                <!-- Sección para la Imagen SVG (Ruido Visual)-->
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">                                    <!-- Contorno de la ventana normanda -->                     
+                    <rect x="2" y="10" width="16" height="9" stroke="#3d7fff" stroke-width="1"/>                            <!-- Semicírculo superior -->
+                    <path d="M2,10 A8,8 0 0,1 18,10" stroke="#3d7fff" stroke-width="1"/>                                    <!-- Arco inferior -->
+                    <line x1="10" y1="2" x2="10" y2="10" stroke="#3d7fff" stroke-width=".5" stroke-dasharray="1.5,1.5"/>    <!-- Línea vertical central -->
+                    <circle cx="10" cy="10" r="1" fill="#3d7fff"/>                                                          <!-- Punto central -->
+                </svg>
+            
+            </div> GeoFrame                                                                                                 <!-- Nombre de la aplicación al lado del logo -->
+        </div>
+        <div class="header-center">OPTIMIZADOR DE VENTANA NORMANDA</div>                                                    <!-- Subtítulo centrado -->
+        <div class="header-right">                                                                                          <!-- Enlaces de navegación a secciones y descarga -->
+            <a href="#fundamento" class="header-link">FUNDAMENTO</a>                                                        <!-- Enlace a la sección de fundamento matemático -->
+            <a href="#modulos" class="header-link">MÓDULOS</a>                                                              <!-- Enlace a la sección de módulos del sistema -->
+            <a href="#figura" class="header-link">PREVIEW</a>                                                               <!-- Enlace a la sección de captura de pantalla -->
+            <a href="https://github.com/TheNarratorVIMMXX/GeoFrame/releases" class="dl-btn" target="_blank">↓ DESCARGAR</a> <!-- Botón de descarga que abre el enlace en una nueva pestaña -->
+        </div>
+        </header>
+        <section class="hero">                                                                                              <!-- Sección principal de introducción -->
+            <div class="hero-left">                                                                                         <!-- Lado izquierdo con título, descripción y acciones -->
+                <div class="hero-eyebrow">Optimización con restricciones · Cálculo diferencial</div>                        <!-- Etiqueta descriptiva -->
+                <h1 class="hero-title">Geo<em>Frame</em></h1>                                                               <!-- Título principal con énfasis en "Frame" -->
+                <p class="hero-desc">                                                                                       <!-- Descripción principal -->
+                    Calcula y visualiza las dimensiones exactas de una ventana normanda que maximizan el área disponible
+                    dado un perímetro fijo.
+                </p>
+                <div class="hero-actions">                                                                                  <!-- Botones de acción para descarga y GitHub -->
+                    <a href="https://github.com/TheNarratorVIMMXX/GeoFrame/releases" class="hero-dl" target="_blank">       <!-- Botón de descarga -->
+                        ↓ GeoFrame.exe
+                    </a>
+                    <a href="https://github.com/TheNarratorVIMMXX/GeoFrame" class="hero-gh" target="_blank">GitHub →</a>    <!-- Botón para el repositorio de GitHub -->
+                </div>
+            </div>
+            <div class="hero-right">                                                                                        <!-- Lado derecho con visualización de ventana normanda -->
+                <div class="rings">                                                                                         <!-- Anillos de visualización -->
+                    <div class="ring"></div><div class="ring"></div><div class="ring"></div>                                <!-- Tres anillos para crear un efecto visual dinámico -->                
+                    <div class="ring"></div><div class="ring"></div>                                                        <!-- Dos anillos adicionales para mayor profundidad -->
+                </div>
+                <div class="crosshair"><div class="ch-h"></div><div class="ch-v"></div></div>                               <!-- Retícula central para resaltar el punto óptimo -->
+                <div class="window-svg-wrap">                                                                               <!-- Contenedor para el SVG de la ventana -->
+                 
+                    <!-- Sección de Imagen SVG-->
+                    <svg viewBox="-80 -20 440 420" width="420" height="400" xmlns="http://www.w3.org/2000/svg">             <!-- SVG para la visualización de la ventana -->
+                        <defs>                                                                                              <!-- Definiciones de filtros -->
+                            <filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/>                       <!-- Filtro de brillo -->
+                                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>         <!-- Mezcla de los efectos -->
+                            </filter>
+                            <filter id="glow2"><feGaussianBlur stdDeviation="6" result="coloredBlur"/>                      <!-- Filtro de brillo más intenso para el punto central -->
+                                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>         <!-- Mezcla de los efectos -->
+                            </filter>
+                        </defs>
+                        <rect x="60" y="150" width="160" height="160" fill="rgba(18,69,214,.07)"/>                          <!-- Marco de la ventana -->
+                        <path d="M60,150 A80,80 0 0,1 220,150" fill="rgba(32,96,255,.1)"/>                                  <!-- Semicírculo superior con relleno -->
+                        <rect class="draw-path" x="60" y="150" width="160" height="160"                                     
+                        fill="none" stroke="#2060ff" stroke-width="1.5" filter="url(#glow)"/>                               <!-- Marco de la ventana con efecto de brillo -->
+                        <path class="draw-path" d="M60,150 A80,80 0 0,1 220,150" fill="none" 
+                        stroke="#3d7fff" stroke-width="1.5" filter="url(#glow)"/>                                           <!-- Semicírculo superior con efecto de brillo -->
+                        <circle cx="140" cy="150" r="3" fill="#3d7fff" filter="url(#glow2)"/>                               <!-- Punto central con efecto de brillo intenso -->
+                        <line x1="140" y1="66" x2="140" y2="76" stroke="#3d7fff" stroke-width="1" opacity=".4"/>            <!-- Línea de Abajo -->
+                        <line x1="60" y1="330" x2="220" y2="330" stroke="#3d7fff" stroke-width=".5"                         
+                        stroke-dasharray="3,3" opacity=".5"/>                                                               <!-- Línea de Arriba -->
+                        <line x1="60" y1="325" x2="60" y2="335" stroke="#3d7fff" stroke-width="1" opacity=".7"/>            <!-- Línea de la izquierda -->
+                        <line x1="220" y1="325" x2="220" y2="335" stroke="#3d7fff" stroke-width="1" opacity=".7"/>          <!-- Línea de la derecha -->
+                        <polygon points="65,328 60,330 65,332" fill="#3d7fff" opacity=".7"/>                                <!-- Triángulo de la izquierda -->
+                        <polygon points="215,328 220,330 215,332" fill="#3d7fff" opacity=".7"/>                             <!-- Triángulo de la derecha -->
+                        <text x="140" y="348" fill="#3d7fff" font-family="JetBrains Mono,monospace" font-size="11"          
+                        text-anchor="middle" letter-spacing="2" opacity=".9" font-weight="400">x</text>                     <!-- Texto de la coordenada x -->
+                        <text x="140" y="362" fill="#3d7fff" font-family="JetBrains Mono,monospace" font-size="7.5" 
+                        text-anchor="middle" letter-spacing="1" opacity=".45" font-weight="300">ANCHO</text>                <!-- Texto de la dimensión ANCHO -->
+                        <line x1="20" y1="150" x2="20" y2="310" stroke="#3d7fff" stroke-width=".5" 
+                        stroke-dasharray="3,3" opacity=".5"/>                                                               <!-- Línea vertical central -->
+                        <line x1="15" y1="150" x2="25" y2="150" stroke="#3d7fff" stroke-width="1" opacity=".7"/>            <!-- Línea horizontal superior -->
+                        <line x1="15" y1="310" x2="25" y2="310" stroke="#3d7fff" stroke-width="1" opacity=".7"/>            <!-- Línea horizontal inferior -->
+                        <polygon points="18,155 20,150 22,155" fill="#3d7fff" opacity=".7"/>                                <!-- Triángulo de la parte superior -->
+                        <polygon points="18,305 20,310 22,305" fill="#3d7fff" opacity=".7"/>                                <!-- Triángulo de la parte inferior -->
+                        <text x="7" y="234" fill="#3d7fff" font-family="JetBrains Mono,monospace" font-size="11"            
+                        text-anchor="middle" letter-spacing="2" opacity=".9" font-weight="400">y</text>                     <!-- Texto de la coordenada y -->
+                        <text x="7" y="248" fill="#3d7fff" font-family="JetBrains Mono,monospace" font-size="7.5" 
+                        text-anchor="middle" letter-spacing="1" opacity=".45" font-weight="300">ALT</text>                  <!-- Texto de la dimensión ALTURA --> 
+                        <line x1="140" y1="150" x2="220" y2="150" stroke="#5a9fff" stroke-width=".5"                       
+                        stroke-dasharray="3,3" opacity=".5"/>                                                               <!-- Línea horizontal central -->
+                        <text x="182" y="144" fill="#5a9fff" font-family="JetBrains Mono,monospace" font-size="9"   
+                        text-anchor="middle" letter-spacing="1.5" opacity=".8" font-weight="300">r = x/2</text>             <!-- Texto del radio del semicírculo -->
+                        <line class="draw-path-fast" x1="140" y1="150" x2="140" y2="70" stroke="#5a9fff" s 
+                        troke-width=".8" stroke-dasharray="4,3" opacity=".5"/>                                              <!-- Línea vertical desde punto central hacia arriba -->
+                        <g stroke="#3d7fff" stroke-width=".8" opacity=".4" fill="none">                                     <!-- Grupo de líneas de referencia -->
+                            <path d="M60,160 L60,150 L70,150"/> <path d="M210,150 L220,150 L220,160"/>                      <!-- Esquinas Superiores-->
+                            <path d="M60,300 L60,310 L70,310"/> <path d="M210,310 L220,310 L220,300"/>                      <!-- Esquinas Inferiores-->
+                        </g>
+                        <text x="140" y="238" fill="#2060ff" font-family="JetBrains Mono,monospace" font-size="7.5" 
+                        text-anchor="middle" letter-spacing="3" opacity=".4" font-weight="300">RECTÁNGULO</text>            <!-- Texto de la sección del rectángulo -->
+                        <text x="140" y="118" fill="#3d7fff" font-family="JetBrains Mono,monospace" font-size="7.5" 
+                        text-anchor="middle" letter-spacing="3" opacity=".4" font-weight="300">SEMICÍRCULO</text>           <!-- Texto de la sección del semicírculo -->
+                        <text x="260" y="148" fill="#3d7fff" font-family="JetBrains Mono,monospace" font-size="8" 
+                        opacity=".6" letter-spacing="1">A(x) →</text>                                                       <!-- Texto de la función de área -->
+                        <text x="260" y="162" fill="#3d7fff" font-family="JetBrains Mono,monospace" font-size="8" 
+                        opacity=".6" letter-spacing="1">MAX</text>                                                          <!-- Texto de la función de área -->
+                        <line x1="255" y1="150" x2="222" y2="150" stroke="#3d7fff" stroke-width=".5" opacity=".4"/>         <!-- Línea horizontal superior derecha -->
+                        <text x="-70" y="90" fill="#2060ff" font-family="JetBrains Mono,monospace" font-size="7.5" 
+                        opacity=".5" letter-spacing=".5">P = x + 2y</text>                                                  <!-- Texto de la restricción del perímetro -->
+                        <text x="-70" y="103" fill="#2060ff" font-family="JetBrains Mono,monospace" font-size="7.5"  
+                        opacity=".5" letter-spacing=".5">  + π(x/2)</text>                                                  <!-- Continuación del texto de la restricción del perímetro -->
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Métricas con Animación Fade-In, Valor y Label -->
+        <div class="metrics">
+            <div class="metric reveal d1">
+                <div class="metric-val">4</div>
+                <div class="metric-label">Paneles de<br>visualización</div>
+            </div>
+            <div class="metric reveal d2">
+                <div class="metric-val">1–100<sup>m</sup></div>
+                <div class="metric-label">Rango de<br>perímetro</div>
+            </div>
+            <div class="metric reveal d3">
+                <div class="metric-val">0.0001</div>
+                <div class="metric-label">Precisión<br>numérica</div>
+            </div>
+            <div class="metric reveal d4">
+                <div class="metric-val">0</div>
+                <div class="metric-label">Dependencias<br>de instalación</div>
+            </div>
+        </div>
+
+        <!-- Sección de Fundamento Matemático y Funcionalidades -->
+        <section class="section math-section" id="fundamento">                                                              <!-- Sección con dos columnas: una para el fundamento matemático y otra para los módulos del sistema -->                           
+            <div class="math-col reveal">                                                                                   <!-- Columna izquierda para el fundamento matemático -->
+                <div class="section-num">01 — FUNDAMENTO MATEMÁTICO</div>                                                   <!-- Número de sección -->
+                <h2 class="section-heading">El problema<br>de <em>optimización</em></h2>                                    <!-- Encabezado de sección -->
+                <p class="math-body">                                                                                       <!-- Descripción de la sección -->
+                    Dado un perímetro fijo P, se busca la distribución óptima entre ancho y alto que produce el área máxima 
+                    posible.
+                </p> 
+
+                <!-- Sección de Ecuaciones con Etiqueta y Fórmula -->
+                <div class="eq">                                                                                        
+                    <span class="eq-tag">RESTRICCIÓN</span>                                                                
+                    <div class="eq-formula">P = <span class="hi">x</span>(1 + π/2) + 2<span class="hi">y</span></div>       
+                </div>
+                <div class="eq">   
+                    <span class="eq-tag">DESPEJANDO y</span>
+                    <div class="eq-formula">y = (P − x(1 + π/2)) / 2</div>
+                </div>
+                <div class="eq">
+                    <span class="eq-tag">ÁREA TOTAL</span>
+                    <div class="eq-formula">A(x) = xy + π<span class="hi">x</span>²/8</div>
+                </div>
+                <div class="eq">
+                    <span class="eq-tag">dA/dx = 0</span>
+                    <div class="eq-formula">P/2 = x(1 + π/4)</div>
+                </div>
+                <div class="eq">
+                    <span class="eq-tag">ÓPTIMO</span>
+                    <div class="eq-formula"><span class="result">x_opt = P / (2 + π/2)</span></div>
+                </div>
+                <div class="eq">
+                    <span class="eq-tag">VERIFICACIÓN</span>
+                    <div class="eq-formula" style="border:none">
+                        d²A/dx² = −1 − π/4 &lt; 0 &nbsp;<span class="hi">✓ máximo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="math-col reveal" id="modulos">                                                                      <!-- Columna derecha para los módulos del sistema -->
+                <div class="section-num">02 — MÓDULOS DEL SISTEMA</div>                                                     <!-- Etiqueta del módulo -->
+                <h2 class="section-heading"><em>Cuatro</em> paneles<br>de análisis</h2>                                     <!-- Título del módulo -->
+                
+                <!-- Lista de características del módulo con Número, Título y Descripción -->
+                <ul class="feat-list"> 
+                    <li class="feat-item">
+                        <span class="feat-n">01</span>
+                        <div class="feat-content">
+                            <div class="feat-title">Ventana Normanda</div>
+                            <div class="feat-body">
+                                Representación geométrica interactiva con anotaciones de dimensiones. Modos Normal, 
+                                Detallado y Técnico.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="feat-item">
+                        <span class="feat-n">02</span>
+                        <div class="feat-content">
+                            <div class="feat-title">Gráfica A(x)</div>
+                            <div class="feat-body">
+                                Curva de la función de área frente al ancho. Punto máximo identificado visualmente con 
+                                líneas de referencia dinámicas.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="feat-item">
+                        <span class="feat-n">03</span>
+                        <div class="feat-content">
+                            <div class="feat-title">Resultados en Tiempo Real</div>
+                            <div class="feat-body">
+                                Dimensiones óptimas x, y y radio del semicírculo actualizadas al instante con precisión de
+                                cuatro decimales.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="feat-item">
+                        <span class="feat-n">04</span>
+                        <div class="feat-content">
+                            <div class="feat-title">Análisis de Sensibilidad</div>
+                            <div class="feat-body">
+                                Variación del área máxima para cualquier perímetro en el rango 1–100 m con el punto actual 
+                                resaltado.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section figure-section" id="figura">                                                                <!-- Sección para la captura de pantalla de la aplicación -->
+            <div class="figure-header reveal">                                                                              <!-- Encabezado de la sección de figura con etiqueta y título -->
+                <span class="fig-label">CAPTURA DE PANTALLA</span>                                                          <!-- Etiqueta de la sección de figura -->
+                <div class="figure-line"></div>                                                                             <!-- Línea decorativa debajo del encabezado -->
+                <span class="fig-title">Interfaz completa de GeoFrame</span>                                                <!-- Título de la sección de figura -->
+            </div> 
+            <div class="app-figure reveal"> <img src="imgs/app.png" alt="GeoFrame — Interfaz de la aplicación"></div>       <!-- Imagen de la captura de pantalla -->
+        </section>
+        <section class="section dl-section">                                                                                <!-- Sección para la descarga de la aplicación -->
+            <div class="dl-left reveal">                                                                                    <!-- Lado izquierdo con información de descarga -->
+                <div>
+                    <div class="section-num">03 — DESCARGA</div>                                                            <!-- Número de sección -->
+                    <div class="dl-big">Sin<br>instalación.<br><em>Ejecuta y listo.</em></div>                              <!-- Texto grande para enfatizar la facilidad de uso -->
+                </div>
+                <div class="dl-bottom">                                                                                     <!-- Parte inferior con botón de descarga y nota -->
+                    <a href="https://github.com/TheNarratorVIMMXX/GeoFrame/releases" class="dl-main" target="_blank">       <!-- Botón de descarga principal -->
+                        ↓ Descargar GeoFrame.exe
+                    </a>
+                    <div class="dl-note">WINDOWS · NO REQUIERE PYTHON · DOBLE CLIC</div>                                    <!-- Nota adicional descarga y uso aplicación -->
+                </div>
+            </div>
+            <div class="dl-right reveal">                                                                                   <!-- Lado derecho con especificaciones -->
+                <table class="spec-table">                                                                                 
+                    <tr><td>PLATAFORMA</td><td>Windows 10 / 11</td></tr>
+                    <tr><td>DISTRIBUCIÓN</td><td>Ejecutable standalone</td></tr>
+                    <tr><td>LENGUAJE</td><td>Python 3.11</td></tr>
+                    <tr><td>LIBRERÍAS</td><td>Matplotlib, NumPy, SciPy, PyQt5</td></tr>
+                    <tr><td>RESOLUCIÓN REC.</td><td>1920 × 1080 · Escala 100–150 %</td></tr>
+                    <tr><td>AUTOR</td><td>Carlos Gabriel Magallanes López</td></tr>
+                    <tr><td>FECHA DESARROLLO</td><td>Diciembre 2025</td></tr>
+                    <tr><td>LICENCIA</td><td>Propietario · Uso personal y educativo</td></tr>
+                </table>
+            </div>
+        </section>
+        <footer>                                                                                                            <!-- Pie de Página -->
+            <div class="footer-name">Carlos Gabriel Magallanes López</div>                                                  <!-- Nombre del autor -->
+            <div class="footer-meta">                                                                                       <!-- Metadatos -->
+                <div>© 2025 · Todos los derechos reservados</div>                                                          
+                <div>cgmagallanes23@gmail.com · @TheNarratorVIMMXX</div>
+            </div>
+        </footer>
+        <script src="js/script.js"> </script>                                                                               <!-- Archivo JavaScript para interactividad -->
+    </body>
+</html>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
