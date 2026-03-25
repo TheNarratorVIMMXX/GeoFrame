@@ -7,7 +7,7 @@
 /* Autor: Magallanes López Carlos Gabriel                                                                                                                                    */
 /* Versión del Proyecto: 1.0                                                                                                                                                 */
 /* Correo: cgmagallanes23@gmail.com                                                                                                                                          */
-/* Ultima Modificación: 23/03/2025                                                                                                                                           */
+/* Ultima Modificación: 23/03/2026                                                                                                                                           */
 /*                                                                                                                                                                           */
 /*****************************************************************************************************************************************************************************/
 
