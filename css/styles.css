@@ -862,6 +862,31 @@ footer{
 
 }
 
+/* Botón Flotante de Cambio de Idioma */
+#langToggleBtn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9997;
+    background: var(--blue-electric);
+    color: var(--black);
+    border: none;
+    border-radius: 0;
+    padding: 12px 22px;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    cursor: none;
+    box-shadow: 0 0 30px rgba(61, 127, 255, 0.4);
+    transition: all 0.25s;
+}
+
+#langToggleBtn:hover {
+    background: var(--white);
+    box-shadow: 0 0 50px rgba(61, 127, 255, 0.6);
+}
+
 /* Responsive Design */
 @media(max-width: 900px){
   
@@ -879,7 +904,13 @@ footer{
   footer{padding: 2rem 1.5rem}                                                                                   /* Pie de Página: Reduce padding para pantallas pequeñas */
   .metric{padding: 2rem 1.5rem}                                                                                  /* Métricas: Reduce padding para pantallas pequeñas */
   .metric:nth-child(2){border-right: none}                                                                       /* Segunda métrica: Elimina borde derecho */
-
+  #langToggleBtn {
+        bottom: 16px;
+        right: 16px;
+        padding: 10px 16px;
+        font-size: 0.6rem;
+    }
+  
 }
 
 /*****************************************************************************************************************************************************************************/
