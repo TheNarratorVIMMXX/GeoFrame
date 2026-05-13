@@ -11,6 +11,7 @@ This license permits you to:
 
 ✅ Download and use the software for personal and educational purposes  
 ✅ Install and run the application on your personal devices
+✅ Create derivative works based on the software
 
 ---
 
@@ -22,7 +23,6 @@ You may **NOT**:
 ❌ Redistribute, share, or make copies available to others  
 ❌ Use the software for commercial purposes without written permission  
 ❌ Remove or modify copyright notices or proprietary markings  
-❌ Create derivative works based on the software
 
 ---
 
