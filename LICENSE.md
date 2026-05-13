@@ -10,7 +10,7 @@
 This license permits you to:
 
 ✅ Download and use the software for personal and educational purposes  
-✅ Install and run the application on your personal devices
+✅ Install and run the application on your personal devices  
 ✅ Create derivative works based on the software
 
 ---
