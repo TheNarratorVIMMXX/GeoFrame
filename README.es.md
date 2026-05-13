@@ -1,6 +1,34 @@
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
+
 # 🔷 GeoFrame - Optimizador de Ventana Normanda
 
+![Python](https://img.shields.io/badge/Python-3.13.0-blue?style=for-the-badge&logo=python&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.10.7-11557C?style=for-the-badge&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-4C72B0?style=for-the-badge&logo=python&logoColor=white)
+![PyQt5](https://img.shields.io/badge/PyQt5-5.15.11-41CD52?style=for-the-badge&logo=qt&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-1.16.3-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
+![Type](https://img.shields.io/badge/Tipo-App_Científica-8B008B?style=for-the-badge)
+![License](https://img.shields.io/badge/Licencia-Propietaria-red?style=for-the-badge)
+![Version](https://img.shields.io/badge/Versión-1.0-gold?style=for-the-badge)
+
 **Aplicación interactiva para calcular y visualizar las dimensiones óptimas de ventanas normandas**
+
+---
+
+## 🎬 Vista Previa
+
+<div align="center">
+  <img src="assets/preview.gif" alt="GeoFrame Vista Previa"/>
+</div>
+
+---
+
+## 👤 Autor
+
+- **Desarrollador:** Magallanes López Carlos Gabriel
+- **Correo:** cgmagallanes23@gmail.com
+- **GitHub:** [@TheNarratorVIMMXX](https://github.com/TheNarratorVIMMXX)
+- **Fecha:** Diciembre 2025
 
 ---
 
@@ -15,7 +43,6 @@
 - [🖥️ Configuración de Pantalla](#️-configuración-de-pantalla)
 - [🚀 Uso](#-uso)
 - [📜 Licencia](#-licencia)
-- [👤 Autor](#-autor)
 
 ---
 
@@ -45,7 +72,6 @@ Este no es un problema intuitivo porque:
 - Si la ventana es demasiado ancha, la altura disminuye
 - Si es demasiado alta, el ancho y el semicírculo se reducen
 - El equilibrio óptimo requiere cálculo y técnicas de optimización
-
 
 ---
 
@@ -150,7 +176,6 @@ d²A/dx² = -1 - π/4 < 0  ✓ (Confirma que es un máximo)
 - Útil para análisis de escenarios hipotéticos
 
 ### ⚙️ Optimizaciones de Rendimiento
-
 - **Caché inteligente:** Almacena resultados calculados previamente para evitar cómputos redundantes
 - **Precálculo:** Los datos de sensibilidad se calculan una vez y se reutilizan
 - **Gestión de historial:** Mantiene un registro de los últimos 20 cálculos
@@ -161,14 +186,14 @@ d²A/dx² = -1 - π/4 < 0  ✓ (Confirma que es un máximo)
 
 ### 🛠️ Tecnologías Utilizadas
 
-**Bibliotecas Principales:**
-- **Python 3.11:** Lenguaje de programación principal
-- **Matplotlib 3.5+:** Graficación y visualización avanzada
-- **PyQt5:** Interfaz gráfica de usuario y gestión de ventanas
-- **NumPy:** Cómputo numérico y operaciones con arreglos
-- **SciPy:** Algoritmos avanzados de optimización (`minimize_scalar`)
-- **Seaborn:** Estilizado profesional para gráficas
-
+| Biblioteca | Versión | Propósito |
+|------------|---------|-----------|
+| **Python** | 3.13.0 | Lenguaje de programación principal |
+| **Matplotlib** | 3.10.7 | Graficación y visualización avanzada |
+| **Seaborn** | 0.13.2 | Estilizado profesional para gráficas |
+| **PyQt5** | Más reciente | Interfaz gráfica y gestión de ventanas |
+| **NumPy** | Más reciente | Cómputo numérico y operaciones con arreglos |
+| **SciPy** | Más reciente | Algoritmos avanzados de optimización (`minimize_scalar`) |
 
 ### 🏗️ Arquitectura
 
@@ -179,13 +204,14 @@ La aplicación sigue los principios de la **Programación Orientada a Objetos**:
 - **Estructura modular:** Fácil de mantener y extender
 
 ---
+
 ## 💾 Instalación
 
-**¡No requiere instalación ni dependencias!** El juego está disponible como ejecutable listo para usar.
+**¡No requiere instalación ni dependencias!** La aplicación está disponible como ejecutable listo para usar.
 
 ### 📥 Descarga y Ejecución
 
-1. Ve a la sección de [Releases](https://github.com/TheNarratorVIMXXX/GeoFrame/releases)
+1. Ve a la sección de [Releases](https://github.com/TheNarratorVIMMXX/GeoFrame/releases)
 2. Descarga el archivo `GeoFrame.exe`
 3. Haz doble clic para ejecutar
 4. ¡Listo!
@@ -200,37 +226,35 @@ La aplicación sigue los principios de la **Programación Orientada a Objetos**:
 
 Para la mejor experiencia visual con **GeoFrame**, recomendamos la siguiente configuración de pantalla:
 
-#### **Resolución de Pantalla**
-- **Recomendada:** 1920 × 1080 (Full HD)
-- Esta resolución garantiza que todos los paneles, gráficas y controles se muestren correctamente sin superponerse
+#### Resolución de Pantalla
 
-#### **Escala y Diseño (Windows)**
-La interfaz de la aplicación está optimizada para dos niveles de zoom específicos:
+| Configuración | Valor |
+|---------------|-------|
+| **Recomendada** | 1920 × 1080 (Full HD) |
+| **Mínima** | 1280 × 720 |
 
-**Opción 1: Escala al 150% (Recomendada)**
-- Mejor equilibrio entre visibilidad y espacio en pantalla
-- Texto y controles cómodos de leer
-- Las gráficas mantienen proporciones óptimas
+Esta resolución garantiza que todos los paneles, gráficas y controles se muestren correctamente sin superponerse.
 
-**Opción 2: Escala al 100%**
-- Máximo aprovechamiento de la pantalla
-- Todos los paneles visibles simultáneamente
-- Recomendada para sesiones de análisis detallado
+#### Escala y Diseño (Windows)
 
-#### **Cómo Ajustar la Configuración de Pantalla (Windows 10/11)**
+La interfaz está optimizada para dos niveles de zoom específicos:
 
-1. Haz clic derecho en el escritorio y selecciona **Configuración de pantalla**
-2. En **Escala y diseño**, busca el menú desplegable de **Resolución de pantalla**
-   - Establece en **1920 × 1080 (Recomendado)**
-3. En la misma sección, busca el menú desplegable de **Escala**
-   - Elige **100%** o **150%** según tu preferencia
-4. Haz clic en **Aplicar** y reinicia la aplicación GeoFrame
+| Opción | Escala | Ideal para |
+|--------|--------|-----------|
+| **Opción 1 (Recomendada)** | 150% | Mejor equilibrio entre visibilidad y espacio |
+| **Opción 2** | 100% | Máximo aprovechamiento, todos los paneles visibles |
+
+#### Cómo Ajustar la Configuración (Windows 10/11)
+
+1. Clic derecho en el escritorio → **Configuración de pantalla**
+2. En **Escala y diseño**, establece la resolución en **1920 × 1080 (Recomendado)**
+3. En la misma sección, elige **Escala** al **100%** o **150%**
+4. Haz clic en **Aplicar** y reinicia GeoFrame
 
 #### ⚠️ Notas Importantes
-
-- **Otras resoluciones:** La aplicación funcionará en otras resoluciones, pero el diseño puede no ser óptimo
-- **Otras escalas:** Usar escalas como 125% o 175% puede causar problemas menores de alineación
-- **Múltiples monitores:** Si usas varios monitores, asegúrate de que GeoFrame se ejecute en el monitor con la configuración recomendada
+- **Otras resoluciones:** La aplicación funcionará pero el diseño puede no ser óptimo
+- **Otras escalas:** Usar 125% o 175% puede causar problemas menores de alineación
+- **Múltiples monitores:** Asegúrate de que GeoFrame se ejecute en el monitor con la configuración recomendada
 
 ---
 
@@ -238,10 +262,10 @@ La interfaz de la aplicación está optimizada para dos niveles de zoom específ
 
 ### 🎯 Operación Básica
 
-1. **Abre la aplicación:** Haz doble clic para ejecutar la aplicación
+1. **Abre la aplicación:** Haz doble clic para ejecutarla
 2. **Ajusta el perímetro:** Usa el slider interactivo o los botones predeterminados
 3. **Observa los resultados:** Todos los paneles se actualizan automáticamente
-4. **Cambia el modo de visualización:** Usa los botones de radio (Normal/Detallado/Técnico)
+4. **Cambia el modo de visualización:** Usa los botones de radio (Normal / Detallado / Técnico)
 5. **Analiza la sensibilidad:** Observa cómo cambia el área con diferentes perímetros
 
 ### 📊 Interpretación de Resultados
@@ -260,22 +284,23 @@ Esto significa que con 12 metros de perímetro, el diseño que permite la mayor 
 
 ## 📜 Licencia
 
-# LICENCIA DE SOFTWARE PROPIETARIO
+### LICENCIA DE SOFTWARE PROPIETARIO
 **Copyright © 2025 Carlos Gabriel Magallanes López**  
 **Todos los Derechos Reservados**
 
 ---
 
-## OTORGAMIENTO DE LICENCIA
+### OTORGAMIENTO DE LICENCIA
 
 Esta licencia te permite:
 
-✅ Descargar y usar el software con fines personales y educativos  
-✅ Instalar y ejecutar la aplicación en tus dispositivos personales
+✅ Descargar y utilizar el software para fines personales y educativos  
+✅ Instalar y ejecutar la aplicación en sus dispositivos personales  
+✅ Crear trabajos derivados basados en el software
 
 ---
 
-## RESTRICCIONES
+### RESTRICCIONES
 
 **NO** puedes:
 
@@ -283,37 +308,21 @@ Esta licencia te permite:
 ❌ Redistribuir, compartir o poner copias a disposición de otros  
 ❌ Usar el software con fines comerciales sin permiso escrito  
 ❌ Eliminar o modificar avisos de derechos de autor o marcas propietarias  
-❌ Crear trabajos derivados basados en el software
+
 
 ---
 
-## DESCARGO DE RESPONSABILIDAD
+### DESCARGO DE RESPONSABILIDAD
 
-Este software se proporciona "tal cual", sin garantías de ningún tipo.
-El autor no se hace responsable por daños o problemas derivados del uso del software.
+Este software se proporciona "tal cual", sin garantías de ningún tipo. El autor no se hace responsable por daños o problemas derivados del uso del software.
 
 ---
-
-## CONTACTO
 
 Para consultas de licencia, uso comercial o permisos:
 
-**Correo:** cgmagallanes23@gmail.com  
-**Desarrollador:** Magallanes López Carlos Gabriel
-
----
+📧 **Correo:** cgmagallanes23@gmail.com
 
 **Última Actualización:** 16 de diciembre de 2025
-
----
-
-## 👤 Autor
-
-**Carlos Gabriel Magallanes López**
-
-- **Correo:** cgmagallanes23@gmail.com
-- **GitHub:** [@TheNarratorVIMXXX](https://github.com/TheNarratorVIMXXX)
-- **Fecha:** Diciembre 2025
 
 ---
 
