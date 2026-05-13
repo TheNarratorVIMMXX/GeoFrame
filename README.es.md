@@ -18,7 +18,7 @@
 ## 🎬 Vista Previa
 
 <div align="center">
-  <img src="assets/preview.gif" alt="GeoFrame Vista Previa"/>
+  <img src="assets/gifs/preview.gif" alt="GeoFrame Vista Previa"/>
 </div>
 
 ---
