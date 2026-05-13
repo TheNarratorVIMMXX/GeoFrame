@@ -7,6 +7,7 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-4C72B0?style=for-the-badge&logo=python&logoColor=white)
 ![PyQt5](https://img.shields.io/badge/PyQt5-5.15.11-41CD52?style=for-the-badge&logo=qt&logoColor=white)
 ![SciPy](https://img.shields.io/badge/SciPy-1.16.3-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-2.3.5-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Type](https://img.shields.io/badge/Type-Scientific_App-8B008B?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
 ![Version](https://img.shields.io/badge/Version-1.0-gold?style=for-the-badge)
